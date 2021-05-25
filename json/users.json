@@ -1,0 +1,10 @@
+{
+    "users": [
+        { "username": "Ana", "score": 10, "level": "easy" },
+        { "username": "José", "score": 15, "level": "medium" },
+        { "username": "Maria", "score": 30, "level": "hard" },
+        { "username": "Pedro", "score": 40, "level": "medium" },
+        { "username": "Joane", "score": 20, "level": "easy" },
+        { "username": "Gabriel", "score": 50, "level": "hard" }
+    ]
+}
