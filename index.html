@@ -5,10 +5,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- <script src="/json/users.json"></script> -->
+    <script src="js/script.js"></script>
+
     <title>Lista 09 Promise</title>
+
 </head>
 
 <body>
+    <h1>Selecione o nível de dificuldade para visualizar o ranking</h1>
+    <label for="level">Level</label>
+    <select class="alert-dark" name="level" id="level">
+        <option value="easy" >Easy</option>
+        <option value="medium" selected>Medium</option>
+        <option value="hard">Hard</option>
+    </select>
+    <button id="visualizar">Visualizar</button>
+    <table id="usersTable">
+
+    </table>
 
 </body>
 
