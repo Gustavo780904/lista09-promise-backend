@@ -47,7 +47,7 @@ function filterTable() {
     $headerTable = $(`<thead><th>Username</th><th>Score</th><th>Level</th></thead>`).addClass("thead-dark")
     $tableLine = new Array();
     for (data in $rankingLevel) {
-        $tableLine[data] = (`<tr class="mudacor"><td>${$rankingLevel[data].username}</td><td>${$rankingLevel[data].score}</td><td>${$rankingLevel[data].level}</td></tr>`)
+        $tableLine[data] = (`<tr class="table-light"><td>${$rankingLevel[data].username}</td><td>${$rankingLevel[data].score}</td><td>${$rankingLevel[data].level}</td></tr>`)
     }
     console.log($tableLine)
     $($tableRanking).append($headerTable);
