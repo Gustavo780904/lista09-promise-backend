@@ -39,9 +39,10 @@ function readyUsers() {
 
 function filter() {
     $level = getLevel()
-    $levelFilter = (userslist, level) => (userslist.filter(valor => valor.level === level))
+    strategy = (a, b) => b - a;
+    $levelFilter = (userslist, level) => (userslist.filter(valor => valor.level === level)).map((score, user) => ({...user, ...score })).reduce((list, next) => [...list, next], []).sort((a, b) => strategy(a.score, b.score));
     console.log($levelFilter($users, $level))
-    $rankingLevel = $levelFilter($users, $level)
+    $rankingLevel = $levelFilter($users, $level, strategy)
 
     $tableRanking = $(`<table id="remove"></table>`).addClass("container table");
     $headerTable = $(`<th>Username</th> <th>Score<th> <th>Level</th>`)
@@ -50,9 +51,6 @@ function filter() {
         $tableLine[data] = (`<tr><td>${$rankingLevel[data].username}</td><td>${$rankingLevel[data].score}</td><td>${$rankingLevel[data].level}</td></tr>`)
     }
 
-    // contents.users.forEach(users => {
-    //     $tableLine.push(`<tr><td>${users.username}</td><td>${users.score}</td><td>${users.level}</td></tr>`)
-    // })
     console.log($tableLine)
     $($tableRanking).append($headerTable);
     $($tableRanking).append($tableLine);
